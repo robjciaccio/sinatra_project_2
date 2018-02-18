@@ -1,0 +1,20 @@
+<h1>Add a New Listing</h1>
+
+<form action="/listing/new" method="POST">
+  <label> Description </label>
+  <input type="text" name="description"> </br>
+
+  <label> Price </label>
+  <input type="integer" name="price"> </br>
+
+  <label> current neighborhood </label>
+  <% Neighborhood.all.each do |n| %>
+    <input id="<% n.name %>" type="checkbox" name="neighborhood" value="<%= n.id %>">
+  <% end %>
+
+  <a href="/neighborhood/new">Create New Neighborhood</a>
+</br>
+  <input type="submit" value="Create">
+</form>
+
+<form

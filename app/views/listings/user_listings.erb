@@ -1,0 +1,4 @@
+<% if @listing.user_id == current_user.id %>
+  <%= @listing.price %>
+  <%= @listing.description %>
+<% end %>

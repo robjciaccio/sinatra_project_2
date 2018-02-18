@@ -1,0 +1,15 @@
+<h2>Edit Post description</h2>
+
+<form method="post" action="/listing/<%=@listing.id%>">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <input type="text" name="content" value="<%= @listing.description %>">
+  <input type="submit" value="submit">
+</form>
+
+<h2>Edit Post Price</h2>
+
+<form method="post" action="/listing/<%=@listing.id%>">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <input type="integer" name="content" value="<%= @listing.price %>">
+  <input type="submit" value="submit">
+</form>
